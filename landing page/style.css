@@ -233,7 +233,7 @@ body
 .shape
 {
     position: absolute;
-    top: 370px;
+    top: 400px;
     left: -80px;
     /* width: 200px; */
     /* border:1px solid black; */
@@ -242,7 +242,8 @@ body
 
 .shape img
 {
-    width: 400px;
+    width: 300px;
+    z-index: -1;
 }
 
 
@@ -266,52 +267,69 @@ body
 
 .hero-section-right .img1 img
 {
-    width: 200px;
+    width: 210px;
 }
 
 
 .hero-section-right .img2 img
 {
-    width: 180px;
+    width: 190px;
+    margin-left: 30px;
 }
 
 
-.hero-section-right .animate-object
+.hero-section-right .animate-object-1
 {
     position: absolute;
     top: -70px;
-    left: 70px;
-    animation: blobAnimate 5s linear infinite;
+    left: 92px;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+    /* transform: translate(-50% , -50%); */
+}
+.hero-section-right .animate-object-2
+{
+    position: absolute;
+    bottom: 60px;
+    left: -80px;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+    /* transform: translate(-50% , -50%); */
+}
+.hero-section-right .animate-object-3
+{
+    position: absolute;
+    bottom: 80px;
+    right: -20px;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 2s infinite  alternate;
     /* transform: translate(-50% , -50%); */
 }
 
-.hero-section-right .animate-object img
+.hero-section-right .animate-object-1 img
 {
-    width: 200px;
+    width: 185px;
+    
+}
+.hero-section-right .animate-object-2 img
+{
+    width: 150px;
+    transform: skewY(3deg);
+}
+.hero-section-right .animate-object-3 img
+{
+    width: 130px;
+    transform: skewY(3deg);
 }
 
-
-
-/* @keyframes blobAnimate
-{   
-    
-    
-    0%
-    {
-        top: -70px;
-    }
-
-    50%
-    {
-        top:-80px;
-    }
-
-    100%
-    {
-        top:-70px;
-    }
-
-} */
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
 
 
 @media screen and (max-width: 870px) {
@@ -375,10 +393,171 @@ body
         height: auto;
       }
     
-    .animate-object
+    .animate-object-1
     {
         display: none;
     }
 
   }
+
+
   
+ /* dark mode toggle button */
+ :root {
+    --bg-color: #fff;
+    --text-color: #222;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #222;
+    --text-color: #fff;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-top: 12px;
+    margin-right: 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 0px;
+    background-color: var(--bg-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  [data-theme="dark"] .slider:before {
+    background-color: #fff;
+  }
+  
+  [data-theme="dark"] input:checked + .slider {
+    background-color: #555;
+  }
+  
+  [data-theme="dark"] input:checked + .slider:before {
+    background-color: #222;
+  }
+  
+  [data-theme="light"] .slider:before {
+    background-color: #fff;
+  }
+  
+  [data-theme="light"] input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  [data-theme="light"] input:checked + .slider:before {
+    background-color: #ccc;
+  }
+
+  
+
+  /* features section */
+
+  .features-section
+  {
+      max-width: 1200px;
+      position: relative;
+      /* border: 1px solid black; */
+      margin-top: -50px;
+      padding: 30px;
+  }
+
+
+  .features-heading
+  {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 70px;
+  }
+
+  .features-heading .head-2
+  {
+      font-size: 40px;
+
+  }
+
+.features
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* border: 1px solid black; */
+    place-items: center center;
+}
+
+
+.features .box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    /* border: 1px solid red; */
+    
+}
+
+
+.para-heading
+{
+    
+    margin: 15px;
+    text-transform: capitalize;
+}
+
+.para-subheading
+{
+    color: var(--lightone);
+}
+
+
+
+
+/* testimonial section */
+
+
+
