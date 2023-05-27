@@ -527,6 +527,7 @@ body
     grid-template-columns: repeat(3,1fr);
     /* border: 1px solid black; */
     place-items: center center;
+    gap: 3rem;
 }
 
 
@@ -538,9 +539,33 @@ body
     justify-content: center;
     max-width: 300px;
     /* border: 1px solid red; */
+    border: 1px solid #F0F0F0;
+    border-radius: 30px;
+    padding: 30px;
+    
+    cursor: pointer;
+    transform: 0.8s;
     
 }
 
+.features .box:hover
+{
+    background-color: #F8F8F8;
+
+}
+
+.features .box i
+{
+    color: var(--main-color);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.features .box h3
+{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
 
 .para-heading
 {
@@ -557,7 +582,144 @@ body
 
 
 
+/* searchbar section */
+
+
+.search-section
+{
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   margin-top: 70px;
+   flex-direction: column;
+}
+
+.search-heading
+{
+    font-size: 30px;
+}
+
+.search-bar
+{
+    margin: 30px;
+    display: flex;
+    height: 55px;
+    width: 500px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #fff;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.search-bar:hover input
+{
+    width: 400px;
+}
+
+.search-bar input
+{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+
+
+/* icons section */
+.icons-section
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-section .icons
+{
+    border: 1px solid #F0F0F0;
+    text-align: center;
+    /* box-shadow:  0 10px 25px rgba(0,0,0,0.3); */
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+.icons-section .icons i
+{
+    color: var(--main-color);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.icons-section .icons h3
+{
+    color: var(--darktwo);
+}
+
+.icons-section .icons p{
+    color: var(--lighttwo);
+    margin-top: 10px;
+}
+
+
+
 /* testimonial section */
+
+.review .review-heading
+{
+    text-align: center;
+    font-size: 30px;
+    color: var(--darktwo);
+    margin: 30px;
+}
+.review .review-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.review .review-container .review-box
+{
+    border: 1px solid #F0F0F0;
+    text-align: center;
+   
+    padding: 2rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.review .review-container .review-box img
+{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+
+.review .review-container .review-box h3
+{
+    color: var(--darktwo);
+    margin-top: 10px;
+    margin-bottom: 7px;
+    font-size: 23px;
+}
+
+.review .review-container .review-box .stars
+{
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
 
 
 
