@@ -70,6 +70,7 @@ body
 {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 .logo-text
 {
@@ -675,7 +676,8 @@ body
     text-align: center;
     font-size: 30px;
     color: var(--darktwo);
-    margin: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .review .review-container
 {
@@ -709,17 +711,190 @@ body
 
 .review .review-container .review-box h3
 {
-    color: var(--darktwo);
+    color: var(--bg-color);
     margin-top: 10px;
     margin-bottom: 7px;
     font-size: 23px;
+
 }
 
 .review .review-container .review-box .stars
 {
-    color: var(--main-color);
-    margin-bottom: 10px;
+    color: var(--bg-color);
+    padding-bottom: 40px;
+}
+
+
+.review .review-container .review-box::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--main-color);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height: 13rem;
+    width: 120%;
+    z-index: -1;
+
 }
 
 
 
+
+
+/* doctor section */
+
+.doctor-heading
+{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:50px;
+    margin-top: 50px;
+}
+
+.doctor-section
+{
+    margin-bottom: 100px;
+}
+.doctor-section .doctor-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+.doctor-section .doctor-container .doctor-box
+{
+    border: 1px solid #F0F0F0;
+    text-align: center;
+   
+    padding: 2rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.doctor-section .doctor-container .doctor-box:hover
+{
+    background-color: #F8F8F8;
+}
+
+
+.doctor-section .doctor-container .doctor-box img
+{
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+
+.doctor-section .doctor-container .doctor-box h3
+{
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.doctor-section .doctor-container .doctor-box span
+{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.doctor-section .doctor-container .doctor-box div
+{
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+
+.doctor-section .doctor-container .doctor-box a{
+    color: #2196F3;
+    margin-left: 10px;
+}
+
+.doctor-section .doctor-container .doctor-box a:hover
+{
+    color: #72b9e6;
+}
+
+
+
+
+/* booking section */
+
+.booking-heading
+{
+    text-align: center;
+    margin-top: 90px;
+    font-size: 40px;
+}
+.booking-section .book-row
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+
+
+}
+
+
+
+.booking-section .book-row .book-img img
+{
+    width: 600px;
+
+}
+
+
+.booking-section .book-row form
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex: 1 1 45rem;
+    background: var(--bg-color);
+    border: 1px solid #F0F0F0;
+    border-radius: 20px;
+}
+
+.booking-section .book-row form input
+{
+    margin: 15px;
+    padding: 10px;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid #F0F0F0;
+    color: var(--lightone);
+    
+    
+}
+
+.booking-section .book-row form #submit
+{
+    cursor: pointer;
+     font-size: 15px; 
+     background: #64bcf4; 
+     color: white; 
+     font-weight: 400;
+}
+
+.booking-section .book-row form #submit:hover
+{
+    background: var(--hover-color);
+}
+
+.booking-section .book-row form #calender
+{
+    color: var(--lightone);
+}
