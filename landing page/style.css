@@ -333,6 +333,8 @@ body
 }
 
 
+/* media queries hero section */
+
 @media screen and (max-width: 870px) {
     
   
@@ -374,6 +376,9 @@ body
     .hero-section-left
     {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-section-right
@@ -400,6 +405,9 @@ body
     }
 
   }
+
+
+
 
 
   
@@ -581,6 +589,27 @@ body
 }
 
 
+@media screen and (max-width: 596px) {
+    
+    
+    .head-2
+    {
+        text-align: center;
+    }
+
+
+    .features
+    {
+        max-width: 412px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+
+  }
+
+
 
 
 /* searchbar section */
@@ -630,6 +659,21 @@ body
 }
 
 
+@media screen and (max-width: 596px){
+
+    .search-heading
+    {
+        text-align: center;
+    }
+
+
+    .search-bar
+    {
+        width: 400px;
+    }
+}
+
+
 
 /* icons section */
 .icons-section
@@ -665,6 +709,15 @@ body
 .icons-section .icons p{
     color: var(--lighttwo);
     margin-top: 10px;
+}
+
+@media screen and (max-width: 596px)
+{
+    .icons-section
+    {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -739,6 +792,15 @@ body
     width: 120%;
     z-index: -1;
 
+}
+
+@media screen and (max-width: 596px)
+{
+    .review .review-container
+    {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -825,6 +887,16 @@ body
     color: #72b9e6;
 }
 
+@media screen and (max-width: 596px)
+{
+    .doctor-section .doctor-container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
 
 
 
@@ -897,4 +969,24 @@ body
 .booking-section .book-row form #calender
 {
     color: var(--lightone);
+}
+
+
+@media screen and (max-width: 596px)
+{
+    .booking-section .book-row
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-section .book-row .book-img img
+    {
+        width: 420px;
+
+    }
+
+
+    
+
 }
